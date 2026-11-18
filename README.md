@@ -8,9 +8,7 @@ preprocessed grayscale car images.
 The robot combines a forward-facing camera, a Raspberry Pi-based control
 system and a line-following track. The prepared dataset uses 6,627
 Canny-preprocessed `64 x 64` images, with two continuous outputs that represent
-the original driving controls. The repository focuses on this data rather than
-the unrelated SVHN digit-classification exercise also present in the source
-folder.
+the original driving controls.
 
 ## Project video
 
@@ -102,16 +100,3 @@ original training script and full dataset.
 ![Historical training cost](assets/historical-cost.png)
 
 ![Historical prediction error](assets/historical-error.png)
-
-## Project cleanup notes
-
-- The source `cnn_tf2.0.py` reads the SVHN `train_32x32.mat` / `test_32x32.mat`
-  files and trains a ten-class digit classifier; it does not train the car
-  control data, so it is intentionally not copied here.
-- The course examples and large checkpoints are omitted. The upstream course
-  repository does not declare a license in its repository metadata.
-- `Image_Control_Data.mat` and its separate label file are not copied because
-  their row-wise label alignment differs from `ControlOutputs.mat`; the
-  Canny-preprocessed file provides an unambiguous image/target pair.
-- No license is declared for the project files. Choose a license before
-  publishing if you want to grant reuse rights.
