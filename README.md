@@ -1,9 +1,51 @@
 # Car Behavioural Cloning
 
-This repository contains a small, reproducible CNN-regression example for
-learning two continuous driving-control targets from preprocessed grayscale
-car images. The repo uses the Canny-preprocessed dataset rather than the
-unrelated SVHN digit-classification exercise also present in the source folder.
+This repository contains the code for an **honours project** on vision-based
+behavioural cloning for a physical RC car. It provides a small, reproducible
+CNN-regression example for learning continuous driving-control targets from
+preprocessed grayscale car images.
+
+The robot combines a forward-facing camera, a Raspberry Pi-based control
+system and a line-following track. The prepared dataset uses 6,627
+Canny-preprocessed `64 x 64` images, with two continuous outputs that represent
+the original driving controls. The repository focuses on this data rather than
+the unrelated SVHN digit-classification exercise also present in the source
+folder.
+
+## Project video
+
+[Watch the behavioural-cloning honours project showcase](https://drive.google.com/file/d/1MTzskjVxMeXpl2r-PrD8J5mpxSEIIMxa/view?usp=sharing)
+
+The video shows the physical track, the real Canny training examples, the CNN
+architecture and the original thesis experiments. It also distinguishes the
+historical honours-project results from the cleaned, reproducible PyTorch
+trainer in this repository.
+
+### Showcase highlights
+
+- 6,627 prepared camera/control pairs with a single-channel `64 x 64` input.
+- A compact CNN regressor predicting two continuous control values.
+- Historical experiments covering model comparisons, training-set size and
+  CPU/GPU training.
+- A reported 92.5% result on unseen image data and a physical Raspberry
+  Pi-based RC-car prototype.
+- A physical demonstration described by the original project as partial:
+  autonomous steering was learned, while speed remained constant.
+
+## Vehicle and operation
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/ROS%20Control%20System.jpg" alt="Camera and control hardware mounted on the RC car" width="100%">
+      <br><em>Onboard camera and control hardware</em>
+    </td>
+    <td align="center">
+      <img src="assets/car-on-track-demo.jpg" alt="RC car following the black line on the test track" width="100%">
+      <br><em>RC car following the track during operation</em>
+    </td>
+  </tr>
+</table>
 
 ## Dataset
 
