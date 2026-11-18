@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Ignore other archived datasets but keep the small selected sample dataset.
+data/*.mat
+!data/Canny_Preprocess.mat
+
+# Local training output and model checkpoints
+runs/
+*.pt
+*.pth
+VID-20171109-WA0000.mp4
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
